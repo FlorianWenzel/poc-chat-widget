@@ -374,6 +374,7 @@
       if (!greeted) {
         greeted = true;
         addMessage(ui.messages, "Hello World", "bot");
+        addMessage(ui.messages, TOKEN ? "Token received: " + TOKEN : "No token received.", "bot");
       }
       setTimeout(function () { ui.input.focus(); }, 50);
     }
