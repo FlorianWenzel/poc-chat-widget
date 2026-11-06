@@ -7,6 +7,11 @@
   if (window.__pocChatWidgetLoaded) return;
   window.__pocChatWidgetLoaded = true;
 
+  // document.currentScript is only set while this file is first executing, so it must be read before any async work.
+  var ownScript = document.currentScript || document.querySelector("script[data-token][src*='chat-widget']");
+  var TOKEN = ownScript ? ownScript.getAttribute("data-token") : null;
+  if (!TOKEN) console.warn("[poc-chat-widget] No data-token attribute found on the script tag.");
+
   var HOST_RESET = [
     "all: initial !important",
     "display: block !important",
