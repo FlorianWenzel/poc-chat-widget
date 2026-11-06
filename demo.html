@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hostile Host Page</title>
+  <style>
+    * { box-sizing: content-box !important; font-family: "Comic Sans MS", cursive !important; }
+    html { font-size: 30px; color: red; line-height: 3; letter-spacing: 4px; text-transform: uppercase; }
+    body { background: #222; color: lime; margin: 40px; transform: translateZ(0); }
+    div, section, header, form, span, p { border: 3px dashed hotpink !important; padding: 20px !important; background: yellow !important; }
+    button { all: unset; background: red !important; color: black !important; width: 300px !important; font-size: 40px !important; }
+    input { border: 10px solid orange !important; height: 80px !important; }
+    canvas { display: none !important; }
+    svg { width: 200px !important; height: 200px !important; }
+    [id^="poc"] { display: none; opacity: 0.1; }
+    .launcher, .panel, .messages { display: none !important; }
+  </style>
+</head>
+<body>
+  <h1>Host page with deliberately hostile CSS</h1>
+  <p>The widget in the bottom right corner should look clean regardless.</p>
+  <script src="chat-widget.js"></script>
+</body>
+</html>
